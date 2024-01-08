@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import MainLayout from "./layouts/mainLayout"
 import { usePrefered, useTheme } from "./store/features/theme/hooks"
 import { setTheme } from "./store/features/theme/actions"
+import Header from "./components/header"
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const preferedTheme = usePrefered()
 
   const handleSetTheme = () => {
-    if(preferedTheme == 'darkTheme'){
+    if (preferedTheme == 'darkTheme') {
 
       return setTheme('lightTheme')
     }
@@ -27,12 +28,12 @@ function App() {
 
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen flex items-center flex-col bg-third">
+      <Header />
       <MainLayout>
-        <p className="bg-primary  text-third"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptas excepturi labore. Neque, incidunt, perspiciatis deleniti odit expedita delectus beatae aliquid ea cupiditate eveniet <p className="text-secondary">secondary</p> tempore labore explicabo at. Libero architecto sapiente explicabo. Veritatis dolorum iure recusandae ipsam odit corrupti error pariatur, excepturi similique totam rem dolor velit optio quis ex!</p>
+
       </MainLayout>
 
-      <button onClick={handleSetTheme}>set theme</button>
     </div>
   )
 }

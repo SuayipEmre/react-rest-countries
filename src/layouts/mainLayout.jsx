@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainLayout = ({children}) => {
   return (
-    <div>
+    <div className='w-[375px] lg:w-[1440px] '>
         {
             children
         }

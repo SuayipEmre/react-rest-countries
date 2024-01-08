@@ -6,14 +6,14 @@ import classNames from 'classnames'
 
 const FilterAndSearch = () => {
 
-    const [isSelectVisible, setIsSelectVisible] = useState(true)
+    const [isSelectVisible, setIsSelectVisible] = useState(false)
 
     return (
-        <div className="flex items-center justify-between mt-12">
+        <div className="flex mx-4 lg:mx-0 lg:items-center gap-6 lg:gap-0 justify-between flex-col lg:flex-row mt-12">
 
             <Search />
 
-            <div className=" w-[200px] relative  ">
+            <div className="w-[200px] relative  ">
 
                 <div className="flex items-center gap-2 mb-2 bg-secondary px-4 py-4 rounded-md cursor-pointer" onClick={() => setIsSelectVisible(!isSelectVisible)}>
                     <p className="w-full px-2">Filter By Region</p>

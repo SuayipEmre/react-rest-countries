@@ -1,24 +1,14 @@
 import { useEffect } from "react"
 import MainLayout from "./layouts/mainLayout"
 import { usePrefered, useTheme } from "./store/features/theme/hooks"
-import { setTheme } from "./store/features/theme/actions"
 import Header from "./components/header"
-
-
+import { IoIosSearch } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import FilterAndSearch from "./components/filterAndSearch";
 function App() {
 
   const theme = useTheme()
   const preferedTheme = usePrefered()
-
-  const handleSetTheme = () => {
-    if (preferedTheme == 'darkTheme') {
-
-      return setTheme('lightTheme')
-    }
-
-    setTheme('darkTheme')
-
-  }
 
   useEffect(() => {
     document.documentElement.style.setProperty('--primary', theme[preferedTheme].primary)
@@ -32,6 +22,7 @@ function App() {
       <Header />
       <MainLayout>
 
+       <FilterAndSearch />
       </MainLayout>
 
     </div>

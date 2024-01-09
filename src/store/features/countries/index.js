@@ -5,6 +5,7 @@ import axios from "axios";
 
 const initialState = {
     countries : [],
+    countriesByRegion : 'All',
     filterCountriesSearch : '',
     countriesStatus : {
         isLoading : false,
@@ -23,7 +24,10 @@ export const countries = createSlice({
     reducers: {
       _setSearchKeyword : (state, action) => {
         state.filterCountriesSearch = action.payload
-      }
+      },
+      _setCountriesByRegion : (state, action) => {
+        state.countriesByRegion = action.payload
+      },
     },
     
     extraReducers  : (builder) => {
@@ -55,5 +59,5 @@ export const countries = createSlice({
     }
 })
 
-export const {_setSearchKeyword} = countries.actions
+export const {_setSearchKeyword, _setCountriesByRegion} = countries.actions
 export default countries.reducer

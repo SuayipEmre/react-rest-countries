@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import { regions } from '../constant'
 import classNames from 'classnames'
+import { setCountriesByRegion } from '../../../store/features/countries/actions'
 
 const SelectRegion = () => {
     const [isSelectVisible, setIsSelectVisible] = useState(false)
@@ -19,7 +20,7 @@ const SelectRegion = () => {
             })}>
                 {
                     regions.map(item => (
-                        <div key={item.id} className='my-2 cursor-pointer'>{item.region}</div>
+                        <div key={item.id} className='my-2 cursor-pointer' onClick={() => setCountriesByRegion(item.region)}>{item.region}</div>
                     ))
                 }
 

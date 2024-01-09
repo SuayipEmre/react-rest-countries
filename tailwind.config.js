@@ -12,7 +12,8 @@ export default {
       colors : {
         primary : 'var(--primary)',
         secondary: 'var(--secondary)',
-        third : 'var(--third)'
+        third : 'var(--third)',
+        inputColor : 'var(--inputColor)',
       }
     },
   },

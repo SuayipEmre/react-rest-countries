@@ -5,6 +5,7 @@ import axios from "axios";
 
 const initialState = {
     countries : [],
+    filterCountriesSearch : '',
     countriesStatus : {
         isLoading : false,
         isError : false,
@@ -19,7 +20,11 @@ export const _fetchCountries = createAsyncThunk('fetch countries', async() => {
 export const countries = createSlice({
     name :'countries',
     initialState,
-    reducers: {},
+    reducers: {
+      _setSearchKeyword : (state, action) => {
+        state.filterCountriesSearch = action.payload
+      }
+    },
     
     extraReducers  : (builder) => {
       builder
@@ -50,5 +55,5 @@ export const countries = createSlice({
     }
 })
 
-
+export const {_setSearchKeyword} = countries.actions
 export default countries.reducer

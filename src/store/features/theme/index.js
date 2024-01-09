@@ -28,7 +28,7 @@ const initialState = {
         third : '#fafafa',
 
         /* (Light Mode Input) */
-        inputColor: '858585'
+        inputColor: '#858585'
     }
 
 }

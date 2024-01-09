@@ -2,9 +2,10 @@ import { useEffect } from "react"
 import MainLayout from "./layouts/mainLayout"
 import { usePrefered, useTheme } from "./store/features/theme/hooks"
 import Header from "./components/header"
-import { IoIosSearch } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
 import FilterAndSearch from "./components/filterAndSearch";
+import Countries from "./components/countries";
+
+
 function App() {
 
   const theme = useTheme()
@@ -18,11 +19,14 @@ function App() {
 
 
   return (
-    <div className="w-full min-h-screen flex items-center flex-col bg-third">
+    <div className="   min-h-screen flex items-center flex-col bg-third">
       <Header />
+
       <MainLayout>
 
-       <FilterAndSearch />
+        <FilterAndSearch />
+        <Countries />
+
       </MainLayout>
 
     </div>

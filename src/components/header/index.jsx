@@ -16,11 +16,11 @@ const Header = () => {
     
       }
     return (
-        <div className='bg-secondary  shadow-sm py-6 flex items-center justify-center w-full'>
+        <div className='bg-secondary  py-6 shadow-md flex items-center justify-center w-full'>
 
             <div className='w-[1440px] px-4 lg:px-0 flex items-center justify-between '>
-                <h1 className='font-[600]  lg:font-extrabold lg:text-[27px]'>Where in the world</h1>
-                <div className='flex items-center gap-2' onClick={handleSetTheme}>
+                <h1 className='font-[600]  lg:font-extrabold lg:text-[27px]'>Where in the world?</h1>
+                <div className='flex cursor-pointer items-center gap-2' onClick={handleSetTheme}>
                     {
                         preferedTheme == 'darkTheme' ? 
                             <>
@@ -43,5 +43,4 @@ const Header = () => {
         </div>
     )
 }
-//<i class="fa-regular fa-moon"></i>
 export default Header

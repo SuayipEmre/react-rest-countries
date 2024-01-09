@@ -19,9 +19,9 @@ const MainLayout = () => {
 
 
   return (
-    <div className='min-h-screen flex items-center flex-col bg-third '>
+    <div className='min-h-screen   flex items-center flex-col bg-third '>
       <Header />
-      <div className='w-[375px] md:w-full xl:w-[1440px] '>
+      <div className='w-[375px] md:w-full 2xl:w-[1440px] '>
         <Outlet />
       </div>
 

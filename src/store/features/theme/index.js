@@ -39,18 +39,17 @@ const initialState = {
 /*
 
 dark mode
-
 elements : #2b3945
 text : #ffffff
 background : 202c37
 
-
 light mode
-
 elements : #ffffff
 text : #111517
 backgorund :#fafafa
 input : 858585
+
+
 */
 
 export const theme  = createSlice({

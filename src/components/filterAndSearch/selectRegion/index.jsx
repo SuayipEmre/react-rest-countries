@@ -20,7 +20,7 @@ const SelectRegion = () => {
             })}>
                 {
                     regions.map(item => (
-                        <div key={item.id} className='my-2 cursor-pointer' onClick={() => setCountriesByRegion(item.region)}>{item.region}</div>
+                        <div key={item.id} className='my-2 font-light cursor-pointer' onClick={() => setCountriesByRegion(item.region)}>{item.region}</div>
                     ))
                 }
 

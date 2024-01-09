@@ -30,7 +30,7 @@ const Countries = () => {
                             key={item.name.official}
                             className='col-span-4 md:col-span-2 lg:col-span-1 bg-secondary shadow-lg rounded-sm'
                             onClick={() => handleCountryDetailClick(item)}>
-                            <img className='w-full h-40 object-cover rounded-md rounded-b-none ' src={item.flags.png} />
+                            <img className='w-full h-40 object-cover rounded-md rounded-b-none ' src={item.flags.png} alt={item.name.common + ' flag'} />
 
                             <div className='my-4 px-6 flex flex-col gap-2'>
                                 <p className='mb-4 font-extrabold'>{item.name.common}</p>

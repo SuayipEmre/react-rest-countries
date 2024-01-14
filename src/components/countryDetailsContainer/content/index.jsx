@@ -9,22 +9,22 @@ const CountryDetailContent = ({ state }) => {
     return (
         <>
             {/*main container */}
-            <div className='flex flex-col lg:flex-row  items-center justify-between mt-12 2xl:gap-16'>
+            <div className='flex flex-col lg:flex-row items-center justify-between mt-12 2xl:gap-16'>
 
                 {/*left side (flag) */}
                 <div className='flex-1 mb-4 md:my-0 '>
-                    <img src={state.flags.png} className='w-full lg:w-[70%] 2xl:w-full' alt={nativeName + 'flag'} />
+                    <img src={state.flags.png} className='w-full lg:w-[70%] ' alt={nativeName + 'flag'} />
                 </div>
 
                 {/*right Side */}
                 <div className='flex-1'>
                     {/*right Side top content */}
-                    <div className='w-full '>
+                    <div className='w-full'>
                         {/*title */}
                         <h1 className='font-bold text-[30px] mb-4 lg:mb-12'>{state?.name?.common}</h1>
 
                         {/*content*/}
-                        <div className='flex w-full flex-col lg:flex-row justify-between '>
+                        <div className='flex w-full flex-col md:flex-row justify-between '>
 
                             {/*left Side */}
                             <div className='flex  flex-col gap-3 mb-12 lg:mb-0'>
@@ -53,7 +53,7 @@ const CountryDetailContent = ({ state }) => {
 
                     {/*right Side bottom content */}
                     <div className='flex  items-center gap-4 mt-8 flex-wrap'>
-                        <p > Border Countries : </p>
+                        <p> Border Countries : </p>
 
                         <div className='flex items-center flex-wrap gap-4'>
                             {state.borders.map(item => <p key={item} className='bg-secondary font-light text-[14px] px-6 py-1 shadow '>{item}</p>)

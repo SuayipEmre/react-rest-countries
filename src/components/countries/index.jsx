@@ -28,7 +28,7 @@ const Countries = () => {
                     .map(item => (
                         <div
                             key={item.name.official}
-                            className='col-span-4 md:col-span-2 lg:col-span-1 bg-secondary shadow-lg rounded-sm'
+                            className='col-span-4 hover:scale-110 transition-all cursor-pointer md:col-span-2 lg:col-span-1 bg-secondary shadow-lg rounded-sm'
                             onClick={() => handleCountryDetailClick(item)}>
                             <img className='w-full h-40 object-cover rounded-md rounded-b-none ' src={item.flags.png} alt={item.name.common + ' flag'} />
 
